@@ -1,4 +1,5 @@
 
+
 /*-------
 font
 ---------*/
@@ -314,6 +315,10 @@ home page
     border-radius: 0 0 200px 0;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+}
+.home > div{
+    z-index: 30;
 }
 .home-text h1{
     font-size: 55px;
@@ -337,6 +342,7 @@ home page
     max-width: 480px;
     width: 100%;
     animation: moveY 4s ease infinite;
+  
 }
 .home-img{
     position: relative;
@@ -708,10 +714,27 @@ toggle theme
 .toggle-theme i{
     line-height: 40px;
 }
+
+/*-------
+Canvas Crowd Simulator
+-------*/
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+#canvas {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+}
+
 /*-------
 responsive
 ---------*/
-
 @media(max-width: 991px){
     .navbar-toggler{
         background-color: var(--dark-to-main-color);
@@ -777,6 +800,12 @@ responsive
         display: none;
     }
 }
+
+
+
+
+
+
 
 
 
