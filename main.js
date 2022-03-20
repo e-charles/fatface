@@ -100,6 +100,39 @@ $(document).ready(function(){
         }
     }
     
+    if(localStorage.getItem("WL")=== null){
+            localStorage.setItem("WL", "not done");
+    }
+    /*------ popup-1 Collapse-------------*/
+    let i= 0;
+ 
+    setInterval(function(){
+       if(localStorage.getItem("WL")=== "not done" && i === 0){
+            $(".popup-1").addClass("open");
+           i++;
+        } 
+    }, 1500);
+
+    $(".popup-1").on("click", function(){
+        if($(".popup-1").hasClass("open")){
+            $(".popup-1").removeClass("open");
+        }
+    })
+  /*------ popup-2 Collapse-------------*/
+    
+    $("#submit").on("click", function(){
+        if(!$(".popup-2").hasClass("open") &&
+          localStorage.getItem("WL") === "not done"){
+            $(".popup-2").addClass("open");
+            localStorage.setItem("WL", "done")
+        }
+    });
+    $(".popup-2").on("click", function(){
+        if($(".popup-2").hasClass("open")){
+            $(".popup-2").removeClass("open");
+        }
+    })
+                    
     /*------ Crowd Sim-------------*/
     console.clear()
 console.log('lsakdfalskjdflnksd')
